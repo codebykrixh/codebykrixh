@@ -1,0 +1,78 @@
+# ═══════════════════════════════════════════════════════════════════
+#  Save as:  .github/workflows/grs.yml   (in codebykrixh/codebykrixh)
+#
+#  Generates your stats cards as static SVGs and commits them into
+#  the repo, so your README loads them locally — no external service,
+#  no rate limits, nothing to break.
+#
+#  After the first successful run, swap the image URLs in your README:
+#      ./profile/stats.svg
+#      ./profile/top-langs.svg
+#      ./profile/top-langs-donut.svg
+#      ./profile/pin-suryashield.svg
+#      ./profile/pin-digilogbook.svg
+# ═══════════════════════════════════════════════════════════════════
+
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"      # daily at 03:00 UTC
+  workflow_dispatch:          # lets you trigger it manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&rank_icon=github&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&icon_color=7c3aed&text_color=c9d1d9&ring_color=00d9ff
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (compact)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (donut)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=donut&langs_count=6&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9
+          path: profile/top-langs-donut.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card — SuryaShield AI
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=codebykrixh&repo=Suryashield-ai&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed
+          path: profile/pin-suryashield.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card — DigiLogBook
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=codebykrixh&repo=Digital-Logbook-System&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed
+          path: profile/pin-digilogbook.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit cards
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "chore: refresh README stat cards" || exit 0
+          git push

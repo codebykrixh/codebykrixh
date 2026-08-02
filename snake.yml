@@ -1,0 +1,42 @@
+# ═══════════════════════════════════════════════════════════════════
+#  Save as:  .github/workflows/snake.yml   (in codebykrixh/codebykrixh)
+#
+#  Generates the contribution-snake animation and pushes it to an
+#  "output" branch. Your README already points at that branch, so the
+#  snake starts working the moment this runs once.
+#
+#  After committing, go to the Actions tab and run it manually once
+#  (Run workflow) — otherwise you wait until the next scheduled run.
+# ═══════════════════════════════════════════════════════════════════
+
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"    # every 12 hours
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: codebykrixh
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
