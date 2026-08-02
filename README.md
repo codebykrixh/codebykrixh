@@ -302,7 +302,7 @@ krish@iiit-guwahati:~$ ./benchmark --all --verbose
       <div align="center">
         <h3>🛰️ SuryaShield AI</h3>
         <a href="https://github.com/codebykrixh/Suryashield-ai">
-          <img alt="SuryaShield AI repo card" src="https://github-readme-stats.vercel.app/api/pin/?username=codebykrixh&repo=Suryashield-ai&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed&border_color=7c3aed"/>
+          <img alt="SuryaShield AI repo card" src="https://github-stats-extended.vercel.app/api/pin/?username=codebykrixh&repo=Suryashield-ai&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed&border_color=7c3aed"/>
         </a>
         <p><em>AI-powered environmental monitoring platform<br/>that turns raw signals into readable insight.</em></p>
         <p>
@@ -321,7 +321,7 @@ krish@iiit-guwahati:~$ ./benchmark --all --verbose
       <div align="center">
         <h3>📒 DigiLogBook</h3>
         <a href="https://github.com/codebykrixh/Digital-Logbook-System">
-          <img alt="DigiLogBook repo card" src="https://github-readme-stats.vercel.app/api/pin/?username=codebykrixh&repo=Digital-Logbook-System&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed&border_color=7c3aed"/>
+          <img alt="DigiLogBook repo card" src="https://github-stats-extended.vercel.app/api/pin/?username=codebykrixh&repo=Digital-Logbook-System&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=7c3aed&border_color=7c3aed"/>
         </a>
         <p><em>Full-stack digital logbook for activity tracking,<br/>documentation and audit-friendly records.</em></p>
         <p>
@@ -496,15 +496,15 @@ gantt
 <br/>
 
 <div align="center">
-  <img height="175" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=codebykrixh&show_icons=true&include_all_commits=true&count_private=true&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&icon_color=7c3aed&text_color=c9d1d9&ring_color=00d9ff&rank_icon=github"/>
+  <img height="175" alt="GitHub stats" src="https://github-stats-extended.vercel.app/api?username=codebykrixh&show_icons=true&include_all_commits=true&count_private=true&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&icon_color=7c3aed&text_color=c9d1d9&ring_color=00d9ff&rank_icon=github"/>
   <img height="175" alt="GitHub streak" src="https://streak-stats.demolab.com?user=codebykrixh&background=0D1117&border=7C3AED&stroke=7C3AED&ring=00D9FF&fire=7C3AED&currStreakLabel=00D9FF&sideLabels=00D9FF&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=8B949E"/>
 </div>
 
 <br/>
 
 <div align="center">
-  <img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=codebykrixh&layout=compact&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&langs_count=8"/>
-  <img height="165" alt="Repos per language" src="https://github-readme-stats.vercel.app/api/top-langs/?username=codebykrixh&layout=donut&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&langs_count=6"/>
+  <img height="165" alt="Top languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=codebykrixh&layout=compact&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&langs_count=8"/>
+  <img height="165" alt="Repos per language" src="https://github-stats-extended.vercel.app/api/top-langs/?username=codebykrixh&layout=donut&border_color=7c3aed&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&langs_count=6"/>
 </div>
 
 <br/>
